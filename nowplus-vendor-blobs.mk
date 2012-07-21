@@ -19,7 +19,7 @@
 
 # lib/firmware
 PRODUCT_COPY_FILES = \
-    vendor/samsung/nowplus/proprietary/bluetooth/TIInit_7.2.31.bts:lib/firmware/TIInit_7.2.31.bts
+    vendor/samsung/nowplus/proprietary/bluetooth/TIInit_7.2.31.bts:root/lib/firmware/TIInit_7.2.31.bts
 
 
 #dsp binary firmware loader
@@ -33,18 +33,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/nowplus/proprietary/bin/wlaninit:system/bin/wlaninit
 
 
-# samsung ril
-#PRODUCT_COPY_FILES += \
-#    vendor/samsung/nowplus/proprietary/lib/libsecril-client.so:system/lib/libsecril-client.so \
-#    vendor/samsung/nowplus/proprietary/lib/libsec-ril.so:system/lib/libsec-ril.so\
-#    vendor/samsung/nowplus/proprietary/lib/libsecgps.so:system/lib/libsecgps.so
-
-
-#gps hw dummy lib, no real gps atm.
-#PRODUCT_COPY_FILES += \
-#    vendor/samsung/nowplus/proprietary/lib/gps.nowplus.so:system/lib/hw/gps.nowplus.so
-
-
 # NEON optimized rotation lib for CameraHAL
 PRODUCT_COPY_FILES += \
     vendor/samsung/nowplus/proprietary/lib/librotation.so:system/lib/librotation.so
@@ -55,7 +43,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.ITTIAM.AAC.decode.so:system/lib/libOMX.ITTIAM.AAC.decode.so \
     vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.ITTIAM.AAC.encode.so:system/lib/libOMX.ITTIAM.AAC.encode.so \
     vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.TI.720P.Decoder.so:system/lib/libOMX.TI.720P.Decoder.so \
-    vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.TI.720P.Encoder.so:system/lib/libOMX.TI.720P.Encoder.so
+    vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.TI.720P.Encoder.so:system/lib/libOMX.TI.720P.Encoder.so \
+    vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.TI.h264.splt.Encoder.so:system/lib/libOMX.TI.h264.splt.Encoder.so \
+    vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.TI.mp4.splt.Encoder.so:system/lib/libOMX.TI.mp4.splt.Encoder.so \
+    vendor/samsung/nowplus/proprietary/dsp/lib/libOMX.TI.Video.encoder.so:system/lib/libOMX.TI.Video.encoder.so \
+    vendor/samsung/nowplus/proprietary/dsp/lib/libPERF.so:system/lib/libPERF.so
 
 # dsp images
 PRODUCT_COPY_FILES += \
@@ -110,18 +102,16 @@ PRODUCT_COPY_FILES += \
 
 # sgx
 PRODUCT_COPY_FILES += \
-    vendor/samsung/nowplus/proprietary/sgx/bin/sgx/omaplfb.ko:system/bin/sgx/omaplfb.ko \
-    vendor/samsung/nowplus/proprietary/sgx/bin/sgx/pvrsrvkm.ko:system/bin/sgx/pvrsrvkm.ko \
     vendor/samsung/nowplus/proprietary/sgx/bin/sgx/rc.pvr:system/bin/sgx/rc.pvr \
     vendor/samsung/nowplus/proprietary/sgx/bin/pvrsrvinit:system/bin/pvrsrvinit \
-    vendor/samsung/nowplus/proprietary/sgx/lib/libfakehal.so:system/lib/libfakehal.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/libglslcompiler.so:system/lib/libglslcompiler.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/libIMGegl.so:system/lib/libIMGegl.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/libpvr2d.so:system/lib/libpvr2d.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/libpvrANDROID_WSEGL.so:system/lib/libpvrANDROID_WSEGL.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
-    vendor/samsung/nowplus/proprietary/sgx/lib/libsfutil.so:system/lib/libsfutil.so \
+    vendor/samsung/nowplus/proprietary/sgx/lib/libsrv_init.so:system/lib/libsrv_init.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/libsrv_um.so:system/lib/libsrv_um.so \
+    vendor/samsung/nowplus/proprietary/sgx/lib/libusc.so:system/lib/libusc.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     vendor/samsung/nowplus/proprietary/sgx/lib/egl/libEGL_POWERVR_SGX530_121.so:system/lib/egl/libEGL_POWERVR_SGX530_121.so \
     vendor/samsung/nowplus/proprietary/sgx/lib/egl/libGLESv1_CM_POWERVR_SGX530_121.so:system/lib/egl/libGLESv1_CM_POWERVR_SGX530_121.so \
